@@ -46,7 +46,7 @@ program
 			.then(result => {
 				return configuration.generate(opts, result.Stacks[0]);
 			})
-			.then(result => console.log(JSON.stringify(result).replace('{"aws_cloudformation_stack":{"main"', `{"aws_cloudformation_stack":{"${opts.stack}"`)))
+			.then(result => console.log(JSON.stringify(result)))
 			.catch(err => handleError(err));
 		return getStack(opts)
 			.then(result => {
